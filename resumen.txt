@@ -1,0 +1,38 @@
+**git log es el registro de todos los cambios que hacemos 
+--
+** git status: es para saber el estado de tal carpeta
+
+** git add "nombre del archivo":para que git monitoree los cambios o agrege las modificaciones de ese archivo
+si hago **git add . => monitorea todos los archivos
+**git commit -m "mensaje general de lo que se cambio" y guardamos los cambiios para el git
+*************************************************************************************
+"en caso de que haya un error hay que 'registrarse primero'" => con el siguiente comando: ** git config --global user.email "email" 
+tambien tenemos que usar:** git config --global user.name "nombre"
+*************************************************************************************
+
+**git log** nos permite ver el registro de todos los cambios que hacemos 
+para configurar mi email y mi nombre hago:
+git config --local(o tambien --global) user.name "nombre"
+
+si ahora escribo en el terminal:
+ git config user.name 
+la consola me va a dar el nombre 
+si escribo
+ git config user.email 
+la consola va a dar  el email que ya registre
+
+************************************************************************************************************
+tambioen podemos usar 
+git log --oneline
+git log -p (para salir de este comando usar ":q")
+pagina que puede servir: https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+************************************************************************************************************
+
+
+
+
+
+
+
+
+
