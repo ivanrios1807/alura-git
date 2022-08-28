@@ -83,7 +83,46 @@ Que no debemos realizar commits, es decir, guardar un estado, de nuestra aplicac
 
 *************************
 **inicio clase 3.0**
-
+crear carpeta:
+	mkdir nombreDeVarpeta
+crear servidor puro que solo tiene las modificaciones
+	git init --bare
+listar todos los servidores remotos quenuetsro repositorio conoce
+	git remote 
+agregar servidor remoto a nuestro servidor local
+	git remote add nombreDelServidor direcccion(ej: G:/Mi unidad/oracle/8-Git y GitHub controle y comparta su cÃŗdigo/servidor/)
+si quiero corroborarr la direccion del servidor:
+	git remote -v
+		la direccion del servidor local puede ser un link 
+si notamos nos aparece: 
+	fetch
+		es de donde nosostros vamos a obtener las informaciones 
+	push
+		es a donde vamos a enviar la iformacion
+si otra persona quiere tener nusestro repositorio
+	git clone direcciondenuestroservidor
+enviar datos al servidorlocal
+	git push nombredelservidor
+ahora la otra persona tiene que traer los datos que se subieron al servidor,vamos a la carpeta de la otra persona 
+si usamos 
+	git remote 
+nos aparece origin que es el nombre que le ponen por defecto cuando se agregan repositorios.
+Ahora vamos a cambiarle el nombre
+git remote rename origin nombrequequiera
+si usamos el 
+	git remote 
+nos aparece el nombre que le pusimos.
+Vamos a agregar el repositorio
+	git pull nombrequelepusimosalservidor master
+		"master" es la rama
+Ahora que ya tenemos los archivos en la caprta de la otra persona e hicimos cambios los guardamos con:
+	git add nombredelarchivos.conlaextension
+luego:
+	git commit -m "mensaje"
+y ahora enviamos los cambios al servidor con :
+	git push nombredelservidor master
+una vez hecho esto vamos a la carpeta "original" y traemos los archivos modificados por la otra persona con:
+	git pull nombredelservidor master
 ********************
 
 
