@@ -82,7 +82,15 @@ Cómo hacer que Git no monitoree archivos, a través de .gitignore
 Que no debemos realizar commits, es decir, guardar un estado, de nuestra aplicación que no esté funcionando.
 
 *************************
+
+
 **inicio clase 3.0**
+
+
+
+
+
+
 crear carpeta:
 	mkdir nombreDeVarpeta
 crear servidor puro que solo tiene las modificaciones
@@ -123,6 +131,77 @@ y ahora enviamos los cambios al servidor con :
 	git push nombredelservidor master
 una vez hecho esto vamos a la carpeta "original" y traemos los archivos modificados por la otra persona con:
 	git pull nombredelservidor master
+
+ahora caundo nos creamos la cuenta en github y queresmo subir nuestro repositorio a él usamos 
+	git remote add origin direccionurl
+y despues el comando 
+	git push origin master
+si apretamos f5 en la pagina ddonde esta nuestro repositorio vamos a ver los archivos ya subidos
+
+
+					**resumen del capitulo 3**
+Ha llegado el momento de que pongas en práctica lo visto en clase. Para hacer esto, sigue los pasos que se enumeran a continuación.
+
+1) Cree una nueva carpeta en su computadora;
+
+2) En la terminal (o Git Bash, en Windows) navega hasta la carpeta recién creada (use el comando cd para navegar entre carpetas);
+
+3) Ejecuta el comando git init --bare;
+
+4) Navega hasta la carpeta donde se encuentra tu proyecto;
+
+5) Ejecuta el comando git remote add servidorlocal {ruta}. Reemplaza {ruta} con la ruta completa de la carpeta recién creada;
+
+6) Crea una nueva carpeta en tu computadora, para representar el trabajo de otra persona;
+
+7) En la terminal (o Git Bash, en Windows) navega hasta la carpeta recién creada;
+
+8) Ejecuta el comando git clone {ruta} proyecto. Reemplaza {ruta} con la ruta completa a la carpeta que creamos en el primer paso;
+
+9) Ten en cuenta que el repositorio clonado está vacío;
+
+10) Accede a la carpeta del Proyecto y ejecuta el comando git remote rename origin servidorlocal para cambiar el nombre del repositorio local de la otra persona de "origin" a "servidorlocal";
+
+11) Navega a la carpeta donde se encuentra tu proyecto original;
+
+12) Ejecute el comando git push servidorlocal master para enviar tus cambios a tu servidor;
+
+13) Navega hasta la carpeta creada en el paso 6;
+
+14) Ejecuta el comando git pull servidorlocal master para descargar los cambios;
+
+15) Abre tu navegador y vé a http://github.com/;
+
+16) Crea una cuenta;
+
+17) Crea un nuevo repositorio haciendo clic en el símbolo más (+) en la esquina superior derecha;
+
+18) En la terminal (o Git Bash, en Windows) agrega el repositorio remoto recién creado a tu proyecto inicial (los comandos los muestra el propio GitHub);
+
+19) Ejecuta git push origin master para enviar tus cambios al repositorio en GitHub.
+**********************fin capitulo 3*****************************
 ********************
+				*********capitulo 4*********
+para dividir el trabajo en un mismo archivo 
+crear un branch
+	git branch titulo
+
+ahora cambio a la branch titulo
+	git checkout titulo
+para visualizarlo podemos usar la pagina git visualizing
+podemos usar el
+	git add . 
+para guardar todos los archivos
+si ahora quiero crear un branch y moverme a esa beanch uso el comando:
+	git checkout -b nombreDeBranch
+
+si quiero unir dos brench uso el 
+	git merge nombreDeLaOtraRama
+
+con 
+	git rebase nombreDelBrench 
+hacemos que todos los commit de master vayan atras de los commit hechos en nombreDelBrench y logramos una unica linea
+
+
 
 
