@@ -202,6 +202,103 @@ con
 	git rebase nombreDelBrench 
 hacemos que todos los commit de master vayan atras de los commit hechos en nombreDelBrench y logramos una unica linea
 
+			**resumen del capitulo 4**
 
+Ha llegado el momento de que pongas en práctica lo visto en clase. Para hacer esto, sigue los pasos que se enumeran a continuación.
+
+1) Ejecute el comando git branch y ve que solo existe la rama master en tu repositorio;
+
+2) Ejecuta el comando git branch titulo e inmediatamente después ejecuta el comando git branch. Ve que se creó una nueva rama;
+
+3) Ahora, para comenzar a trabajar en esta rama, escribe git checkout titulo;
+
+4) Ejecuta git branch nuevamente y verifica que ahora te encuentras en la rama llamada titulo;
+
+5) Cambia el título de la página index.html a "Cursos de DevOps de Alura";
+
+6) Agrega los cambios con git add index.html;
+
+7) Haz el commit con git commit -m "Cambiando el título de la página";
+
+8) Ejecuta el comando git log y verifica el nuevo commit;
+
+9) Cambia el título de la página a "Lista de cursos de DevOps de Alura";
+
+10) Repite los pasos 6 y 7, para agregar un nuevo commit, cambiando el mensaje;
+
+11) Repite el paso 8 para verificar el nuevo commit;
+
+12) Ejecuta el comando git checkout master para volver a la línea de desarrollo master;
+
+13) Ejecuta git log para verificar que los dos últimos commits no estén ahí. Comprueba que el contenido de tu archivo también ha vuelto a su estado original;
+
+14) En la carpeta creada para representar el trabajo de otra persona en la clase anterior:
+
+Ejecuta git checkout -b lista para crear una nueva branch, llamada lista y comienza a trabajar en ella;
+Agrega el curso "Kubernetes" a la lista;
+Repite los pasos 6 y 7 para agregar un nuevo commit, cambiando el mensaje;
+Ejecuta el comando git checkout master para volver a la línea de desarrollo master;
+15) Regresa a la carpeta que representa tu propio trabajo;
+
+16) Cambia el nombre del curso de Docker a "Docker: Creando contenedores sin dolor de cabeza";
+
+17) Repite los pasos 6 y 7 para agregar un nuevo commit, cambiando el mensaje;
+
+18) Ejecuta el comando git merge titulo para traer el trabajo realizado en la branch título a la branch master;
+
+19) Ejecuta el comando git log --graph para ver las líneas de desarrollo (branches);
+
+20) Ejecuta git checkout titulo para trabajar en la branch llamada titulo;
+
+21) Cambia el título para que tenga la palabra "Cursos" en mayúscula;
+
+22) Repite los pasos 6 y 7 para agregar un nuevo commit, cambiando el mensaje;
+
+23) Ejecuta el comando git checkout master para volver a la línea de desarrollo master;
+
+24) Ejecuta el comando git rebase titulo;
+
+25) Ejecuta el comando git log y verifica que el commit se agregó antes del commit realizado directamente en la branch master;
+
+26) Ejecuta el comando git push servidorlocal master para enviar tus cambios al repositorio remoto que creamos en la última clase;
+
+27) En la carpeta creada para representar el trabajo de otra persona en la clase anterior:
+
+Ejecuta el comando git pull servidorlocal master para descargar los cambios que ya has realizado;
+Ejecuta el comando git checkout lista para continuar trabajando en la lista de cursos;
+Cambia el nombre del curso de Docker a "Curso de Docker: Creación de contenedores sin dolor de cabeza";
+Repite los pasos 6 y 7 para agregar un nuevo commit, cambiando el mensaje;
+Ejecuta el comando git checkout master para volver a la línea de desarrollo master;
+Intenta juntar tu trabajo con git merge lista;
+Observa que hay conflictos. Corrígelos, dejando solo la línea con el nombre correcto del curso;
+Ejecuta el comando git add index.html para informar que los conflictos en este archivo se han solucionado;
+Ejecuta el comando git commit para que Git complete el merge;
+Ejecuta el comando git push servidorlocal master para enviar tus cambios;
+28) Regresa a la carpeta que representa tu propio trabajo;
+
+29) Cambia el nombre del curso de Vagrant a "Vagrant: Gerenciando máquinas virtuales";
+
+30) Repita los pasos 6 y 7 para agregar un nuevo commit, cambiando el mensaje;
+
+31) Intenta ejecutar el comando git push servidorlocal master. Observa la falla;
+
+32) Ejecuta el comando git pull servidorlocal master para traer los cambios de la otra persona;
+
+33) Ahora si, ejecuta el comando git push servidorlocal master para enviar los cambios.
+
+/*
+En este aula aprendimos:
+
+Que una branch (o rama) es una línea de commits separada, y que se puede usar para desarrollar funcionalidades independientes;
+Que con branches separadas, podemos evitar que el código de una funcionalidad interfiera con otra;
+Cómo traer el trabajo realizado en una branch a otra branch, como la master, usando el comando git merge;
+Que git merge genera un nuevo commit, informando que hubo una mezcla entre dos branches;
+Cómo traer commits de una branch a otra con git rebase
+Que git rebase no genera un commit de merge, lo que simplifica nuestro log;
+Cómo presenta Git los conflictos;
+Cómo resolver conflictos y conservar sólo los cambios deseados con Git.
+
+*/
+**************************
 
 
